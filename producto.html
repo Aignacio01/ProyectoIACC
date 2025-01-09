@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/normalize.css">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <title>Almacenamiento</title>
+</head>
+<body>
+
+    <section class="product" id="servicios">
+        <div class="product__container">
+           <h2 class="product__tit">Nuestros productos</h2>
+           <div class="product__grid">
+               <div class="product__card">
+                   <div class="product__img">
+                       <img class="product__image" src="./IMG/frutera_baja.png" alt="imagen frutera baja">
+                   </div>
+                   <div class="product__content">
+                       <h2 class="product__title">Frutera Baja</h2>
+                       <div class="product__info">
+                           <p class="product__kg">Maximo 15KG</p>
+                           <p class="product__price">$300CLP c/u</p>
+                       </div>
+                   </div>
+               </div>
+               <div class="product__card">
+                   <div class="product__img">
+                       <img class="product__image" src="./IMG/frutera.png" alt="imagen frutera baja">
+                   </div>
+                   <div class="product__content">
+                       <h2 class="product__title">Frutera</h2>
+                       <div class="product__info">
+                           <p class="product__kg">Maximo 22KG</p>
+                           <p class="product__price">$500CLP c/u</p>
+                       </div>
+                   </div>
+               </div>
+               <div class="product__card">
+                   <div class="product__img">
+                       <img class="product__image" src="./IMG/hortalicera.png" alt="imagen frutera baja">
+                   </div>
+                   <div class="product__content">
+                       <h2 class="product__title">Hortalicera</h2>
+                       <div class="product__info">
+                           <p class="product__kg">Maximo 27KG</p>
+                           <p class="product__price">$800CLP c/u</p>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+
+   </section>
+
+   <section class="preselect">
+        <div class="preselect__container">
+            <h2>Calcula las bandejas necesarias.</h2>
+                <label for="bandeja">tipo de bandeja</label>
+                <select name="bandeja" id="bandeja">
+                    <option value="fruterabaja">frutera baja</option>
+                    <option value="frutera">frutera</option>
+                    <option value="hortalicera">hortalicera</option>
+                </select>
+                <label for="peso">peso</label>
+                <input type="number" id="peso" name="peso">
+                
+                <label for="cantidad">cantidad</label>
+                <input type="number" id="cantidad" name="cantidad">
+                <div class="resultado" id="resultado">asd</div>
+        </div>
+   </section>
+
+
+    <main class="producto">
+        <div class="producto__container">
+            <form class="producto__form" action="" method="post">
+                <fieldset class="form__field">
+                    <legend class="producto__legend">Información del producto</legend>
+
+                    <label class="producto__label" for="tproducto">Tipo de producto</label>
+                    <select class="producto__select" name="tproducto" id="tproducto">
+                        <option value="refrigerado">Refrigerado</option>
+                        <option value="congelado">Congelado</option>
+                    </select>
+                    
+                    
+                    <label class="producto__label" for="nproducto">Nombre del producto</label>
+                    <input class="producto__input" type="text" placeholder="Papas" id="nproducto" name="nproducto">
+                    
+                    <label class="producto__label" for="pproducto">Peso del producto (KG)</label>
+                    <input class="producto__input" type="number" placeholder="10kg" id="pproducto" name="pproducto" min="0">
+                    
+                    <label class="producto__label" for="cproducto">Cantidad de producto</label>
+                    <input class="producto__input" type="number" placeholder="1000" id="cproducto" name="cproducto" min="0">
+                </fieldset>
+
+                <fieldset class="form__field">
+                    <legend class="producto__legend">Información del almacenaje</legend>
+                    <label class="producto__label" for="tbandeja">Tipo de bandeja a utilizar</label>
+                    <select class="producto__select" name="tbandeja" id="tbandeja">
+                        <option value="frutera">Frutera</option>
+                        <option value="fruterabaja">Frutera Baja</option>
+                        <option value="hortalicera">Hortalicera</option>
+                        
+                    </select>
+                    
+                    <label class="producto__label" for="cbandeja">Cantidad de bandejas a utilizar</label>
+                    <input class="producto__input" type="number" id="cbandeja" name="cbandeja" placeholder="20" min="0">
+                    
+                    <label class="producto__label" for="cespacio">Espacio a utilizar (m²)</label>
+                    <input class="producto__input" type="number" id="cespacio" name="cespacio" placeholder="10 (m²)" min="0">
+                    
+                    <label class="producto__label" for="dalmacenado">Dias de Almacenamiento</label>
+                    <input class="producto__input" type="number" placeholder="30" id="dalmacenado" name="dalmacenado" min="0">
+                    
+                </fieldset>
+                    <button class="button__form" type="submit">Guardar Productos seleccionados</button>
+            </form>
+
+        </div>
+    </main>
+
+
+
+
+    <!-- si tu producto pesa x y tienes y cantidad de productos, necesitaras z cantidad de bandejas -->
+    <!-- tipo de bandeja para calcular las bandejas necesarias -->
+
+
+</body>
+</html>
